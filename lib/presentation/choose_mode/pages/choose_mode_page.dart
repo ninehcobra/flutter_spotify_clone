@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_spotify_clone/core/configs/assets/app_vector.dart';
+import 'package:flutter_spotify_clone/core/configs/constants/router_constant.dart';
 import 'package:flutter_spotify_clone/presentation/choose_mode/bloc/theme_cubit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -141,11 +142,8 @@ class ChooseModePage extends StatelessWidget {
                 ),
                 BasicAppButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (BuildContext context) =>
-                      //             const SignupOrSigninPage()));
+                      Navigator.pushReplacementNamed(
+                          context, RouterConstant.signupOrSignin);
                     },
                     title: 'Continue')
               ],
